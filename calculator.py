@@ -27,3 +27,7 @@ class Calculator:
     def division(self):
         return (self.number1 - self.number2)
 
+
+#first and second store the two user input integer numbers respectively
+first = int(input("Enter the first number(MUST be an integer!): "))
+second = int(input("Enter the second number(MUST be an integer!): "))
