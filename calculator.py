@@ -25,8 +25,10 @@ class Calculator:
     
     #division() class method divides two numbers 
     def division(self):
-        return (self.number1 - self.number2)
-
+        if (self.number2 == 0):
+            print("Error, cannot divide an integer by 0!")
+        else:
+            return (self.number1 / self.number2)
 
 #first and second store the two user input integer numbers respectively
 first = int(input("Enter the first number(MUST be an integer!): "))
@@ -44,10 +46,10 @@ while (choice != 5):
     print("2. Subtraction")
     print("3. Multiplicaiton")
     print("4. Division")
-    print("5. Exiting calculator.py")
+    print("5. Exit")
 
-    choice = int(input("Enter choice: "))
-    
+    choice = int(input("Enter the operation you would like to perform: "))
+
     if choice == 1:
         print("The addition of both numbers equals: ", user_numbers.addition())
     elif choice == 2:
@@ -56,7 +58,7 @@ while (choice != 5):
         print("The multiplication of both numbers equals: ", user_numbers.multiplication())
     elif choice == 4:
         print("The division of both numbers equals: ", user_numbers.division())
-    elif choice == 0:
+    elif choice == 5:
         print("Exiting!")
     else:
         print("Invalid choice!!")
