@@ -48,17 +48,20 @@ while (choice != 5):
     print("4. Division")
     print("5. Exit")
 
-    choice = int(input("Enter the operation you would like to perform: "))
+    try:
+        choice = int(input("Enter the operation you would like to perform: "))
 
-    if choice == 1:
-        print("The addition of both numbers equals: ", user_numbers.addition())
-    elif choice == 2:
-        print("The subtraction of both numbers equals: ", user_numbers.subtraction())
-    elif choice == 3:
-        print("The multiplication of both numbers equals: ", user_numbers.multiplication())
-    elif choice == 4:
-        print("The division of both numbers equals: ", user_numbers.division())
-    elif choice == 5:
-        print("Exiting!")
-    else:
-        print("Invalid choice!!")
+        if choice == 1:
+            print("The addition of both numbers equals: ", user_numbers.addition())
+        elif choice == 2:
+            print("The subtraction of both numbers equals: ", user_numbers.subtraction())
+        elif choice == 3:
+            print("The multiplication of both numbers equals: ", user_numbers.multiplication())
+        elif choice == 4:
+            print("The division of both numbers equals: ", user_numbers.division())
+        elif choice == 5:
+            print("Exiting!")
+        else:
+            print("Invalid choice!!")
+    except ValueError:
+        print("Invalid choice selected, please enter a number between 1 and 5")
