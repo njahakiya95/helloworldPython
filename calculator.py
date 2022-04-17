@@ -42,26 +42,26 @@ choice = 0
 
 #print while loop until user enters a five
 while (choice != 5):
-    print("1. Addition")
+    print("\n1. Addition")
     print("2. Subtraction")
     print("3. Multiplicaiton")
     print("4. Division")
-    print("5. Exit")
+    print("5. Exit\n")
 
     try:
         choice = int(input("Enter the operation you would like to perform: "))
-
-        if choice == 1:
-            print("The addition of both numbers equals: ", user_numbers.addition())
-        elif choice == 2:
-            print("The subtraction of both numbers equals: ", user_numbers.subtraction())
-        elif choice == 3:
-            print("The multiplication of both numbers equals: ", user_numbers.multiplication())
-        elif choice == 4:
-            print("The division of both numbers equals: ", user_numbers.division())
-        elif choice == 5:
-            print("Exiting!")
-        else:
-            print("Invalid choice!!")
     except ValueError:
-        print("Invalid choice selected, please enter a number between 1 and 5")
+        print("ERROR: Invalid choice! Input must be integer between 1 and 5.\n")
+
+    if choice == 1:
+        print("\nThe addition of both numbers equals: ", user_numbers.addition())
+    elif choice == 2:
+        print("\nThe subtraction of both numbers equals: ", user_numbers.subtraction())
+    elif choice == 3:
+        print("\nThe multiplication of both numbers equals: ", user_numbers.multiplication())
+    elif choice == 4:
+        print("\nThe division of both numbers equals: ", user_numbers.division())
+    elif choice == 5:
+        print("\nExiting!\n")
+    else:
+        print("ERROR: Invalid choice! Input must be integer between 1 and 5.\n")
